@@ -1,0 +1,14 @@
+{% extends "app/base.html" %}
+
+{% block content %}
+    {% for post in post_list %}
+        <div>
+            {# TODO: url reverse 기능을 쓰도록 수정이 되어야 함 #}
+            <a href="/app/{{ post.id }}/">
+                {{ post.id }}. {{ post.title }}. {{ post.content }}
+            </a>
+        </div>
+    {% endfor %}
+    <hr/>
+    <a href="/app/new/">새 포스팅</a>
+{% endblock %}
