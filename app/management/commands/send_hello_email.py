@@ -30,10 +30,10 @@ class Command(BaseCommand):
         except ValidationError as e:
             raise CommandError(e.message)
 
-        send_mail(
-            subject,
-            content,
-            sender_email,
-            receiver_email_list,
-            fail_silently=False,
-        )
+        # send_mail(
+        #     subject,
+        #     content,
+        #     sender_email,
+        #     receiver_email_list,
+        #     fail_silently=False,
+        # )

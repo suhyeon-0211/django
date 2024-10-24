@@ -15,7 +15,7 @@ Including another URLconf
 """
 
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
 
 import app.views
 
@@ -24,4 +24,5 @@ urlpatterns = [
     path("app/", app.views.index),
     path("app/<int:pk>/", app.views.post_detail),
     path("app/new/", app.views.post_new),
+    path("accounts/", include("accounts.urls")),
 ]
